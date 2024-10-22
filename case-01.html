@@ -1,10 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section {
+            margin-top: 400px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            flex-wrap: wrap;
+        }
+
+        section img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        div > div {
+            display: flex;
+            width: 1200px;
+            height: 2px;
+            background-color: lightgrey;
+            margin-top: 10px;
+        }
+
+        section h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section img, section h1 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    </style>
 </head>
 <body>
-$END$
+<section>
+
+        <img src="img/Walk%20Man%20Aniamtion.gif">
+        <h1>A</h1>
+
+
+
+        <img src="img/Walk%20Man%20Aniamtion.gif">
+        <h1>B</h1>
+
+
+
+        <img src="img/Walk%20Man%20Aniamtion.gif">
+        <h1>C</h1>
+
+
+
+        <img src="img/Walk%20Man%20Aniamtion.gif">
+        <h1>D</h1>
+
+
+
+        <img src="img/Walk%20Man%20Aniamtion.gif">
+        <h1>E</h1>
+
+
+
+        <img src="img/Walk%20Man%20Aniamtion.gif">
+        <h1>F</h1>
+
+
+    <img src="img/from-home-car-running.gif">
+
+    <br>
+
+    <div>
+        <div></div>
+    </div>
+</section>
+
+<script>
+    let array = ["A","B","C","D","E","F"];
+
+    setInterval(()=>{
+       let last_value = array.pop();
+       array.unshift(last_value);
+       console.log(array);
+
+        document.getElementsByTagName("h1")[0].innerText=array[0];
+        document.getElementsByTagName("h1")[1].innerText=array[1];
+        document.getElementsByTagName("h1")[2].innerText=array[2];
+        document.getElementsByTagName("h1")[3].innerText=array[3];
+        document.getElementsByTagName("h1")[4].innerText=array[4];
+        document.getElementsByTagName("h1")[5].innerText=array[5];
+    },3000);
+
+</script>
 </body>
 </html>
